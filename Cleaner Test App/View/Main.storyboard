@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Cleaner View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CleanerViewController" customModule="Cleaner_Test_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundBubblesCircle" translatesAutoresizingMaskIntoConstraints="NO" id="fUK-FC-gx1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="267" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fxr-h7-ZRj" userLabel="Top Bar Stack View">
+                                <rect key="frame" x="16" y="0.0" width="343" height="25"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edC-6H-59s">
+                                        <rect key="frame" x="0.0" y="0.0" width="15" height="25"/>
+                                        <color key="tintColor" systemColor="systemGray4Color"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="backButton"/>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ii6-9Z-63h"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Roy-Pm-kI1" userLabel="LogoStackView">
+                                        <rect key="frame" x="282" y="3.5" width="61" height="18"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cleanerLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ghj-sG-4kq">
+                                                <rect key="frame" x="0.0" y="0.0" width="17.5" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ghj-sG-4kq" secondAttribute="height" multiplier="1:1" id="23l-zf-d3l"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="CLEANER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.050000000000000003" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JmL-TE-0sn">
+                                                <rect key="frame" x="17.5" y="0.0" width="43.5" height="18"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ghj-sG-4kq" firstAttribute="height" secondItem="JmL-TE-0sn" secondAttribute="height" id="20V-AJ-vtf"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="AQQ-l2-Dhh">
+                                <rect key="frame" x="132" y="288" width="111" height="238"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qwr-4E-KEF" customClass="ResultView" customModule="Cleaner_Test_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="111" height="111"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="qwr-4E-KEF" secondAttribute="height" multiplier="1:1" id="4gm-5G-QUd"/>
+                                            <constraint firstAttribute="height" constant="111" id="J3b-eO-8h6"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMr-hO-HYP">
+                                        <rect key="frame" x="0.0" y="127" width="111" height="111"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="111" id="1eJ-yX-pOu"/>
+                                            <constraint firstAttribute="width" constant="111" id="ltE-Nd-lAO"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="videoLogo" imagePlacement="top" imagePadding="2" cornerStyle="capsule" titleAlignment="center">
+                                            <backgroundConfiguration key="background" strokeWidth="1">
+                                                <color key="strokeColor" white="0.5" alpha="0.55579846109999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="SECRET STORAGE">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.29644238950000001" green="0.31262016300000001" blue="0.65101337429999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="13" name="Roboto-Regular"/>
+                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" red="0.29644238950000001" green="0.31262016300000001" blue="0.65101337429999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ilp-Ht-blD" customClass="ResultView" customModule="Cleaner_Test_App" customModuleProvider="target">
+                                <rect key="frame" x="248" y="343" width="111" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="2kW-IJ-S90"/>
+                                    <constraint firstAttribute="height" constant="111" id="sq4-AH-Lsd"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqg-s5-N2X" customClass="MemoryView" customModule="Cleaner_Test_App" customModuleProvider="target">
+                                <rect key="frame" x="88" y="61" width="199" height="199"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jqg-s5-N2X" secondAttribute="height" multiplier="1:1" id="5pr-S9-Jgm"/>
+                                    <constraint firstAttribute="width" constant="199" id="vAT-fI-O1j"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="QaB-Rv-LHq">
+                                <rect key="frame" x="68.5" y="526" width="238" height="111"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdi-SB-t72">
+                                        <rect key="frame" x="0.0" y="0.0" width="111" height="111"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="111" id="1QA-kZ-hPn"/>
+                                            <constraint firstAttribute="height" constant="111" id="m5Y-P0-7i2"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="fingerLogo" imagePlacement="top" imagePadding="2" cornerStyle="capsule" titleAlignment="center">
+                                            <backgroundConfiguration key="background" strokeWidth="1">
+                                                <color key="strokeColor" white="0.5" alpha="0.55579846109999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="SECRET STORAGE">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.29644238950000001" green="0.31262016300000001" blue="0.65101337429999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="13" name="Roboto-Regular"/>
+                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" red="0.29644238950000001" green="0.31262016300000001" blue="0.65101337429999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6T-HD-Itt">
+                                        <rect key="frame" x="127" y="0.0" width="111" height="111"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="111" id="RiQ-1B-iNh"/>
+                                            <constraint firstAttribute="height" constant="111" id="e9J-J7-tha"/>
+                                            <constraint firstAttribute="width" secondItem="Y6T-HD-Itt" secondAttribute="height" multiplier="1:1" id="kLE-vr-e6x"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="photoLogo" imagePlacement="top" imagePadding="2" cornerStyle="capsule" titleAlignment="center">
+                                            <backgroundConfiguration key="background" strokeWidth="1">
+                                                <color key="strokeColor" white="0.5" alpha="0.55579846109999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="SECRET STORAGE">
+                                                    <attributes>
+                                                        <font key="NSFont" size="13" name="Roboto-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="rightToLeft" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" red="0.29644238950000001" green="0.31262016300000001" blue="0.65101337429999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1r-GJ-ISw" customClass="ResultView" customModule="Cleaner_Test_App" customModuleProvider="target">
+                                <rect key="frame" x="16" y="341" width="111" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="8Hq-Z1-v1z"/>
+                                    <constraint firstAttribute="height" constant="111" id="ikJ-pA-wZX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.45098039215686275" green="0.45882352941176469" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fxr-h7-ZRj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4gP-7J-ngk"/>
+                            <constraint firstItem="QaB-Rv-LHq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Hh-Kn-xzS"/>
+                            <constraint firstItem="M1r-GJ-ISw" firstAttribute="top" secondItem="jqg-s5-N2X" secondAttribute="bottom" constant="81" id="Bc0-VD-iry"/>
+                            <constraint firstItem="fxr-h7-ZRj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="N2r-lz-kEI"/>
+                            <constraint firstItem="AQQ-l2-Dhh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QOd-5b-lu0"/>
+                            <constraint firstItem="fUK-FC-gx1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QcP-EF-sVH"/>
+                            <constraint firstItem="M1r-GJ-ISw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VgA-zI-BCs"/>
+                            <constraint firstItem="AQQ-l2-Dhh" firstAttribute="top" secondItem="jqg-s5-N2X" secondAttribute="bottom" constant="28" id="Vuj-V7-YKr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fxr-h7-ZRj" secondAttribute="trailing" constant="16" id="WKj-Oh-2lE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ilp-Ht-blD" secondAttribute="trailing" constant="16" id="ZEh-Mf-hlG"/>
+                            <constraint firstItem="fUK-FC-gx1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="btX-kI-4LT"/>
+                            <constraint firstItem="fUK-FC-gx1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cCi-Dd-ksQ"/>
+                            <constraint firstItem="jqg-s5-N2X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cMT-32-MGj"/>
+                            <constraint firstItem="QaB-Rv-LHq" firstAttribute="top" secondItem="AQQ-l2-Dhh" secondAttribute="bottom" id="gMP-H1-Hyi"/>
+                            <constraint firstItem="jqg-s5-N2X" firstAttribute="top" secondItem="fxr-h7-ZRj" secondAttribute="bottom" constant="36" id="iSM-IY-kRK"/>
+                            <constraint firstAttribute="bottom" secondItem="fUK-FC-gx1" secondAttribute="bottom" id="kYn-rD-oKu"/>
+                            <constraint firstItem="Ilp-Ht-blD" firstAttribute="top" secondItem="jqg-s5-N2X" secondAttribute="bottom" constant="83" id="vv3-WM-8IJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contactsResultView" destination="Ilp-Ht-blD" id="hcW-7p-C2v"/>
+                        <outlet property="memoryView" destination="jqg-s5-N2X" id="xwn-YR-kEm"/>
+                        <outlet property="photoButton" destination="Y6T-HD-Itt" id="xBz-Cw-GkP"/>
+                        <outlet property="photoResultView" destination="M1r-GJ-ISw" id="sVp-6K-ZJs"/>
+                        <outlet property="resultView" destination="qwr-4E-KEF" id="k16-6B-UoU"/>
+                        <outlet property="secretStorageButton" destination="hdi-SB-t72" id="eBO-I7-Dhy"/>
+                        <outlet property="videosButton" destination="TMr-hO-HYP" id="Arz-t1-hZC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44" y="-4.0479760119940034"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backButton" width="16" height="25"/>
+        <image name="backgroundBubblesCircle" width="375" height="496"/>
+        <image name="cleanerLogo" width="25" height="25"/>
+        <image name="fingerLogo" width="42" height="44"/>
+        <image name="photoLogo" width="40" height="40"/>
+        <image name="videoLogo" width="40" height="40"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
